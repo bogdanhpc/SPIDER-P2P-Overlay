@@ -1,0 +1,12 @@
+Bandwidth for H.264 with SPIDER: 50.96 Mbps 
+
+Bandwidth for H.264 without SPIDER: 152.88 Mbps 
+
+Bandwidth for MPEG-4 with SPIDER: 79.2 Mbps 
+
+Bandwidth for MPEG-4 without SPIDER: 152.88 Mbps 
+
+Bandwidth for MJPEG with SPIDER: 712.96 Mbps 
+
+Bandwidth for MJPEG without SPIDER: 2138.88 Mbps 
+

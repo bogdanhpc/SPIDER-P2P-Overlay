@@ -1,0 +1,6 @@
+c:\users\bogdan\documents\visual studio 15\Projects\SPIDER\SPIDER\bin\Debug\SPIDER.exe.config
+c:\users\bogdan\documents\visual studio 15\Projects\SPIDER\SPIDER\bin\Debug\SPIDER.exe
+c:\users\bogdan\documents\visual studio 15\Projects\SPIDER\SPIDER\bin\Debug\SPIDER.pdb
+c:\users\bogdan\documents\visual studio 15\Projects\SPIDER\SPIDER\obj\Debug\SPIDER.csprojResolveAssemblyReference.cache
+c:\users\bogdan\documents\visual studio 15\Projects\SPIDER\SPIDER\obj\Debug\SPIDER.exe
+c:\users\bogdan\documents\visual studio 15\Projects\SPIDER\SPIDER\obj\Debug\SPIDER.pdb
