@@ -26,10 +26,10 @@ namespace SPIDER
             Peers = new List<Nod>();
             LastNode = new Nod();
 
-            OvelayMatrix = new int[nrChains+1,nrRings+1];
-            for (int i=0;i<=nrChains;i++)
-                for (int j=0;j<=nrRings;j++)
-                    OvelayMatrix[i,j] = 0;
+            OvelayMatrix = new int[nrChains + 1, nrRings + 1];
+            for (int i = 0; i <= nrChains; i++)
+                for (int j = 0; j <= nrRings; j++)
+                    OvelayMatrix[i, j] = 0;
         }
 
         public void PopulateOverlay()
@@ -173,6 +173,36 @@ namespace SPIDER
         //    peers.Where(item => item.Chain == node.Chain + 1).ToList().ForEach(s => s.status.right = false);
         //}
 
+        public int RemoveRandomNode(Nod node)
+        {
+            return 4;
+        }
+
+        public int RemoveTwoNodesFromSameChain(Nod node1, Nod node2)
+        {
+            return 6;
+        }
+
+        public int RemoveTwoRandomNodes(Nod node1, Nod node2)
+        {
+            return 4;
+        }
+
+        public int RemoveTwoNodesfromSameRing(Nod node1, Nod node2)
+        {
+            return 6;
+        }
+
+
+        public int RemoveChain(int chainNr)
+        {
+            return 100;
+        }
+
+        public int RemoveRing(int ring)
+        {
+            return 101;
+        }
         public void UpdateAllNeihhbours(Nod node)
         {
             if (node.Ring == NrRings)
@@ -288,21 +318,21 @@ namespace SPIDER
             {
                 n.PrintNod();
             }
-                
+
         }
 
         public void DisplayOverlayAsMatrix()
         {
-            
+
             foreach (Nod n in Peers)
             {
-                OvelayMatrix[n.Chain,n.Ring] = 1;
+                OvelayMatrix[n.Chain, n.Ring] = 1;
             }
             for (int i = 0; i <= NrChains; i++)
             {
                 for (int j = 0; j <= NrRings; j++)
                 {
-                    Console.Write(OvelayMatrix[i,j] + "  ");
+                    Console.Write(OvelayMatrix[i, j] + "  ");
                 }
                 Console.WriteLine("\r\n");
             }
