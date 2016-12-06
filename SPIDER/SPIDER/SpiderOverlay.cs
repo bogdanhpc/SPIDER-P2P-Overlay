@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace SPIDER
 {
 
-    class SpiderOverlay : ISpiderOverlay
+    class SpiderOverlay:ISpiderOverlay
     {
         public int NrChains { get; set; }
         public int NrRings { get; set; }
@@ -370,6 +370,15 @@ namespace SPIDER
             return nrHops;
         }
 
+        public int getNoOfRings()
+        {
+            return NrRings;
+        }
+
+        public int getNoOfChains()
+        {
+            return NrChains;
+        }
     }
 
 }

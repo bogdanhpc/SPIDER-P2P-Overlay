@@ -17,7 +17,7 @@ namespace SPIDER
             {
                 File.Delete("Output.txt");
             }
-            SpiderOverlay spiderOverlay = new SpiderOverlay(3, 3);
+            var spiderOverlay = new SpiderOverlay(3, 3);
             spiderOverlay.CreateOverlay();
 
             for (int i=0;i<spiderOverlay.getMaximumNumberOfPeers();i++)
@@ -79,6 +79,8 @@ namespace SPIDER
             //    }
 
             //}
+
+            SPIDER.FlawAnalysis.RunExamples.Run();
         }
     }
 }

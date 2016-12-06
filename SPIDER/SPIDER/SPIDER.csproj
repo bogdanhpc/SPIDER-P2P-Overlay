@@ -43,13 +43,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FlawAnalysis\EnireChainFlawScenario1.cs" />
+    <Compile Include="FlawAnalysis\EnireChainFlawScenario2.cs" />
+    <Compile Include="FlawAnalysis\EntireRingFlaw.cs" />
+    <Compile Include="FlawAnalysis\IFlaw.cs" />
+    <Compile Include="FlawAnalysis\RunExamples.cs" />
     <Compile Include="INod.cs" />
     <Compile Include="ISpiderOverlay.cs" />
     <Compile Include="Neighbour.cs" />
     <Compile Include="Nod.cs" />
+    <Compile Include="FlawAnalysis\OnerRandomNodeFlaw.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SpiderOverlay.cs" />
+    <Compile Include="FlawAnalysis\TwoNodesFromTheSameChainFlaw.cs" />
+    <Compile Include="FlawAnalysis\TwoRandomNodesFlaw.cs" />
+    <Compile Include="FlawAnalysis\TwoRandomNodesFromTheSameRingFlaw.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

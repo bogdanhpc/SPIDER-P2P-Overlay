@@ -1,16 +1,18 @@
 ﻿namespace SPIDER
 {
-    interface ISpiderOverlay
+    public interface ISpiderOverlay
     {
         void CreateOverlay();
         void DisplayOverlay();
-        Nod GetLastNode();
+        //Nod GetLastNode();
         int getMaximumNumberOfPeers();
-        int getNrHops(Nod a, Nod b);
-        bool IsNodeInOverlay(Nod node);
-        void JoinOverlay(Nod existingNode);
-        void LeaveOverlay(Nod node);
+        int getNoOfRings();
+        int getNoOfChains();
+        //int getNrHops(Nod a, Nod b);
+        //bool IsNodeInOverlay(Nod node);
+        //void JoinOverlay(Nod existingNode);
+        //void LeaveOverlay(Nod node);
         void PopulateOverlay();
-        void UpdateAllNeihhbours(Nod node);
+        //void UpdateAllNeihhbours(Nod node);
     }
 }
