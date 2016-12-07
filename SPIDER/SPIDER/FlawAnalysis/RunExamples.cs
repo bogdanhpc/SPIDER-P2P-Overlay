@@ -44,15 +44,6 @@ namespace SPIDER.FlawAnalysis
             Calculate(new SpiderOverlay(6, 100));
             Calculate(new SpiderOverlay(6, 1000));
             Calculate(new SpiderOverlay(6, 2000));
-
-
-
-
-
-
-
-
-
         }
     }
 }

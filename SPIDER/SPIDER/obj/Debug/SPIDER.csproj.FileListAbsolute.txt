@@ -9,3 +9,4 @@ C:\Users\bogdan\Source\Repos\SPIDER overlay\SPIDER\SPIDER\bin\Debug\SPIDER.exe
 C:\Users\bogdan\Source\Repos\SPIDER overlay\SPIDER\SPIDER\bin\Debug\SPIDER.pdb
 C:\Users\bogdan\Source\Repos\SPIDER overlay\SPIDER\SPIDER\obj\Debug\SPIDER.exe
 C:\Users\bogdan\Source\Repos\SPIDER overlay\SPIDER\SPIDER\obj\Debug\SPIDER.pdb
+C:\Users\bogdan\Source\Repos\SPIDER overlay\SPIDER\SPIDER\obj\Debug\SPIDER.csprojResolveAssemblyReference.cache
