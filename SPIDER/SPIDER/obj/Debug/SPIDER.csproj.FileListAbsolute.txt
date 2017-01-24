@@ -10,3 +10,9 @@ C:\Users\bogdan\Source\Repos\SPIDER overlay\SPIDER\SPIDER\bin\Debug\SPIDER.pdb
 C:\Users\bogdan\Source\Repos\SPIDER overlay\SPIDER\SPIDER\obj\Debug\SPIDER.exe
 C:\Users\bogdan\Source\Repos\SPIDER overlay\SPIDER\SPIDER\obj\Debug\SPIDER.pdb
 C:\Users\bogdan\Source\Repos\SPIDER overlay\SPIDER\SPIDER\obj\Debug\SPIDER.csprojResolveAssemblyReference.cache
+C:\Users\bogdan\Source\Repos\SPIDER-P2P-Overlay\SPIDER\SPIDER\bin\Debug\SPIDER.exe.config
+C:\Users\bogdan\Source\Repos\SPIDER-P2P-Overlay\SPIDER\SPIDER\bin\Debug\SPIDER.exe
+C:\Users\bogdan\Source\Repos\SPIDER-P2P-Overlay\SPIDER\SPIDER\bin\Debug\SPIDER.pdb
+C:\Users\bogdan\Source\Repos\SPIDER-P2P-Overlay\SPIDER\SPIDER\obj\Debug\SPIDER.exe
+C:\Users\bogdan\Source\Repos\SPIDER-P2P-Overlay\SPIDER\SPIDER\obj\Debug\SPIDER.pdb
+C:\Users\bogdan\Source\Repos\SPIDER-P2P-Overlay\SPIDER\SPIDER\obj\Debug\SPIDER.csprojResolveAssemblyReference.cache

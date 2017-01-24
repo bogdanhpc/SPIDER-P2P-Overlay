@@ -55,6 +55,7 @@
     <Compile Include="FlawAnalysis\OnerRandomNodeFlaw.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="provider.cs" />
     <Compile Include="SpiderOverlay.cs" />
     <Compile Include="FlawAnalysis\TwoNodesFromTheSameChainFlaw.cs" />
     <Compile Include="FlawAnalysis\TwoRandomNodesFlaw.cs" />
