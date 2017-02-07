@@ -16,3 +16,5 @@ C:\Users\bogdan\Source\Repos\SPIDER-P2P-Overlay\SPIDER\SPIDER\bin\Debug\SPIDER.p
 C:\Users\bogdan\Source\Repos\SPIDER-P2P-Overlay\SPIDER\SPIDER\obj\Debug\SPIDER.exe
 C:\Users\bogdan\Source\Repos\SPIDER-P2P-Overlay\SPIDER\SPIDER\obj\Debug\SPIDER.pdb
 C:\Users\bogdan\Source\Repos\SPIDER-P2P-Overlay\SPIDER\SPIDER\obj\Debug\SPIDER.csprojResolveAssemblyReference.cache
+C:\Users\bogdan\Source\Repos\SPIDER-P2P-Overlay\SPIDER\SPIDER\bin\Debug\StatisticsLibrary.dll
+C:\Users\bogdan\Source\Repos\SPIDER-P2P-Overlay\SPIDER\SPIDER\bin\Debug\StatisticsLibrary.pdb

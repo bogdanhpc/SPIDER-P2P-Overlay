@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SPIDER.VOD.Slot">
+    <Position X="6" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAgAAAAIAAEAAAAAAAAAAAAAAAEAAAAgA=</HashCode>
+      <FileName>VOD\Slot.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SPIDER.VOD.VideoFile">
+    <Position X="1" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAgAAAAIAAAAAAAAAAAAAAAAAAAQAAAgE=</HashCode>
+      <FileName>VOD\VideoFile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SPIDER.VOD.Frame">
+    <Position X="3" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAgAAQAIAAEAAAAAAAAAAAAgAAAAIAAgA=</HashCode>
+      <FileName>VOD\Frame.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

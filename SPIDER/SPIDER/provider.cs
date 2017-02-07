@@ -5,13 +5,15 @@
         private string name;
         private int rezolution;
         private double? bitrate;
+        private double? requiredSize; // required size on disk for 1 second
 
 
-        public Provider(string name, int rezolution, double? bitrate )
+        public Provider(string name, int rezolution, double? bitrate, double? requiredSize )
         {
             Name = name;
             Rezolution = rezolution;
             Bitrate = bitrate;
+            RequiredSize = requiredSize;
         }
         public double? Bitrate
         {
@@ -49,6 +51,19 @@
             set
             {
                 name = value;
+            }
+        }
+
+        public double? RequiredSize
+        {
+            get
+            {
+                return requiredSize;
+            }
+
+            set
+            {
+                requiredSize = value;
             }
         }
     }

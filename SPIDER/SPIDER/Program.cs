@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Security.Cryptography;
 using System.IO;
+using StatisticsLibrary;
+using System.Windows.Forms;
 
 namespace SPIDER
 {
@@ -112,47 +114,115 @@ namespace SPIDER
 
             var providers = new List<Provider>();
 
-            providers.Add(new Provider("Itunes", 240, null));
-            providers.Add(new Provider("Itunes", 360, null));
-            providers.Add(new Provider("Itunes", 480, 1.46));
-            providers.Add(new Provider("Itunes", 720, 3.90));
-            providers.Add(new Provider("Itunes", 480, 4.88));
+            providers.Add(new Provider("Itunes", 240, null,null));
+            providers.Add(new Provider("Itunes", 360, null,null));
+            providers.Add(new Provider("Itunes", 480, 1.46, 1.46/8));
+            providers.Add(new Provider("Itunes", 720, 3.90,3.9/8));
+            providers.Add(new Provider("Itunes", 1080, 4.88,4.88/8));
 
-            providers.Add(new Provider("Netflix", 240, 0.24));
-            providers.Add(new Provider("Netflix", 360, 0.54));
-            providers.Add(new Provider("Netflix", 480, 1.02));
-            providers.Add(new Provider("Netflix2", 480, 1.70));
-            providers.Add(new Provider("Netflix", 720, 2.29));
-            providers.Add(new Provider("Netflix2", 480, 3.51));
-            providers.Add(new Provider("Netflix", 1080, 4.68));
+            providers.Add(new Provider("Netflix", 240, 0.24,0.24/8));
+            providers.Add(new Provider("Netflix", 360, 0.54,0.54/8));
+            providers.Add(new Provider("Netflix", 480, 1.02,1.02/8));
+            providers.Add(new Provider("Netflix2", 480, 1.70,1.70/8));
+            providers.Add(new Provider("Netflix", 720, 2.29,2.29/8));
+            providers.Add(new Provider("Netflix2", 720, 3.51,3.51/8));
+            providers.Add(new Provider("Netflix", 1080, 4.68,4.68/8));
 
-            providers.Add(new Provider("Vimeo", 240, null));
-            providers.Add(new Provider("Vimeo", 360, 0.78));
-            providers.Add(new Provider("Vimeo", 480, null));
-            providers.Add(new Provider("Vimeo", 720, 1.95));
-            providers.Add(new Provider("Vimeo", 480, 4.39));
+            providers.Add(new Provider("Vimeo", 240, null,null));
+            providers.Add(new Provider("Vimeo", 360, 0.78,0.78/8));
+            providers.Add(new Provider("Vimeo", 480, null,null));
+            providers.Add(new Provider("Vimeo", 720, 1.95,1.95/8));
+            providers.Add(new Provider("Vimeo", 1080, 4.39,4.39/8));
 
-            providers.Add(new Provider("Youtube", 240, 0.24));
-            providers.Add(new Provider("Youtube", 360, 0.48));
-            providers.Add(new Provider("Youtube", 480, 0.97));
-            providers.Add(new Provider("Youtube", 720, 1.95));
-            providers.Add(new Provider("Youtube", 480, 3.41));
+            providers.Add(new Provider("Youtube", 240, 0.24,0.24/8));
+            providers.Add(new Provider("Youtube", 360, 0.48,0.48/8));
+            providers.Add(new Provider("Youtube", 480, 0.97,097/8));
+            providers.Add(new Provider("Youtube", 720, 1.95,195/8));
+            providers.Add(new Provider("Youtube", 1080, 3.41,3.41/8));
+
+            var medie = providers.Average(item => item.Bitrate);
+
+            var list240 = providers.Where(item => item.Rezolution == 240);
+            var list360 = providers.Where(item => item.Rezolution == 360);
+            var list480 = providers.Where(item => item.Rezolution == 480);
+            var list720 = providers.Where(item => item.Rezolution == 720);
+            var list1080 = providers.Where(item => item.Rezolution == 1080);
+
+
+            var mean240 = list240.Average(item => item.Bitrate);
+            var mean360 = list360.Average(item => item.Bitrate);
+            var mean480 = list480.Average(item => item.Bitrate);
+            var mean720 = list720.Average(item => item.Bitrate);
+            var mean1080 = list1080.Average(item => item.Bitrate);
+
+
+
+
 
             if (File.Exists("Valuesrezolutiiprovideri.txt"))
             {
                 File.Delete("Valuesrezolutiiprovideri.txt");
             }
 
+            var lspider = new List<double>();
+            var lfspider = new List<double>();
+
             using (StreamWriter writetext = new StreamWriter("Valuesrezolutiiprovideri.txt", true))
             {
 
                 foreach (var item in providers)
                 {
-                    writetext.WriteLine("Bandwidth for " + item.Name + " rezolutie " + item.Rezolution + " is " + hopsValueList.Max() * item.Bitrate + " Mbps \r\n");
-                    writetext.WriteLine("Bandwidth for " + item.Name + " rezolutie " + item.Rezolution + " is " + spiderOverlay.Peers.Count * item.Bitrate + " Mbps \r\n");
+
+                    var spiderValue = hopsValueList.Max() * item.Bitrate /8;
+                    var noSpiderValue = spiderOverlay.Peers.Count * item.Bitrate / 8 ;
+
+                    var ratio = spiderValue / noSpiderValue;
+
+                    writetext.WriteLine("Bandwidth for " + item.Name + " rezolutie " + item.Rezolution + " is " + spiderValue *8  + " Mbps \r\n");
+                    writetext.WriteLine("Bandwidth for " + item.Name + "fara SPIDER rezolutie " + item.Rezolution + " is " + noSpiderValue *8  + " Mbps \r\n");
+                    writetext.WriteLine("Ratio Spider / noSpideris " + ratio);
+                    writetext.WriteLine("Size on disk for " + item.Name + " 1 seconds of streaming is " + item.RequiredSize + "MB\r\n");
+
+                    //
+
+                    if (spiderValue != null && noSpiderValue!=null)
+                    {
+                        lspider.Add((double)spiderValue);
+                        lfspider.Add((double)noSpiderValue);
+
+                    }
+
+
+
+                    //writetext.WriteLine("Size on disk for " + item.Name + " 10 seconds of streaming is " + hopsValueList.Max() * item.Bitrate * 1/8 + "MB\r\n");
+                    //writetext.WriteLine("Size on disk for " + item.Name + " 1 seconds of streaming is " + hopsValueList.Max() * item.Bitrate * 1 / 8 + "MB\r\n");
+
+                    writetext.WriteLine("@@@@\r\n");
+
+
                 }
-                
+
+                //writetext.WriteLine("Max disk size is " + lspider.Max());
+
+                var mediaSpider = lspider.Average();
+                var mediafaraSpider = lfspider.Average();
+
+                var statisticsAnalyzer = new Analysis();
+                var staticticsCalculatorCuSpider = new StaticticsCalculator(lspider);
+                var staticticsCalculatorFaraSpider = new StaticticsCalculator(lfspider);
+
+
+
+                writetext.WriteLine("media cu SPIDER = " + statisticsAnalyzer.DataAnalysis(lspider));
+                writetext.WriteLine("Coef de variatie cu SPIDER = " + staticticsCalculatorCuSpider.CoeficientdeVariatie());
+                writetext.WriteLine("media fara  SPIDER = " + statisticsAnalyzer.DataAnalysis(lfspider));
+                writetext.WriteLine("Coef de variatie fara  SPIDER = " + staticticsCalculatorFaraSpider.CoeficientdeVariatie());
+
+
+
             }
+
+            //var plot = new XYScatter(true, lspider.ToArray(), new double[18,18], "titlu", "x", "y", new Panel());
 
             //}
 

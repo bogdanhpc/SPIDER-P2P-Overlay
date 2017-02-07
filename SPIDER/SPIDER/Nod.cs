@@ -10,14 +10,106 @@ namespace SPIDER
 {
     class Nod : INod
     {
-        public string Id { get; set; }
-        public bool IsSuperPeer { get; set; }
-        public int Chain { get; set; }
-        public int Ring { get; set; }
-        public string Content { get; set; }
-        public Neighbour Status { get; set; }
+        private string id;
+        private bool isSuperPeer;
+        private int chain;
+        private int ring;
+        private string content;
+        private Neighbour status;
+        private double trust;
 
-        public double Trust { get; set; }        
+        public string Id
+        {
+            get
+            {
+                return id;
+            }
+
+            set
+            {
+                id = value;
+            }
+        }
+
+        public bool IsSuperPeer
+        {
+            get
+            {
+                return isSuperPeer;
+            }
+
+            set
+            {
+                isSuperPeer = value;
+            }
+        }
+
+        public int Chain
+        {
+            get
+            {
+                return chain;
+            }
+
+            set
+            {
+                chain = value;
+            }
+        }
+
+        public int Ring
+        {
+            get
+            {
+                return ring;
+            }
+
+            set
+            {
+                ring = value;
+            }
+        }
+
+        public string Content
+        {
+            get
+            {
+                return content;
+            }
+
+            set
+            {
+                content = value;
+            }
+        }
+
+        public Neighbour Status
+        {
+            get
+            {
+                return status;
+            }
+
+            set
+            {
+                status = value;
+            }
+        }
+
+        public double Trust
+        {
+            get
+            {
+                return trust;
+            }
+
+            set
+            {
+                trust = value;
+            }
+        }
+
+
 
         public Nod()
         {
@@ -98,10 +190,6 @@ namespace SPIDER
             }
         }
 
-        public Neighbour GetStatus()
-        {
-            return Status;
-        }
     }
 
 }
